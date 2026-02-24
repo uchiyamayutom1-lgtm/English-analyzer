@@ -113,14 +113,14 @@ export default function App() {
 
             {/* 和訳セクション */}
             <div className="mt-8 p-5 bg-green-50 rounded-xl text-slate-800 text-lg border border-green-100">
-              <strong className="text-green-800 block mb-1 text-xs font-bold uppercase">🇯🇵 日本語訳</strong>
+              <strong className="text-green-800 block mb-1 text-xs font-bold uppercase">日本語訳</strong>
               <p>{result.translation}</p>
             </div>
 
             {/* 解説セクション */}
             <div className="mt-4 p-5 bg-blue-50/50 rounded-xl text-slate-700 text-base border border-blue-100">
-              <strong className="text-blue-800 block mb-2 font-bold">💡 AIによる解説:</strong>
-              {result.explanation}
+              <strong className="text-blue-800 block mb-2 font-bold">💡 AIによる解説</strong>
+              <p>{result.explanation}</p>
             </div>
           </div>
         )}
