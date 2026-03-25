@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-
+import { track } from '@vercel/analytics';
 // --- 1. 型定義 ---
 type Token = {
   text: string;
@@ -21,6 +21,8 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
 
   const handleAnalyze = async () => {
+    track('AnalyzeInput', { text: inputText }); 
+
     if (!inputText.trim()) return;
     
     setIsLoading(true);
